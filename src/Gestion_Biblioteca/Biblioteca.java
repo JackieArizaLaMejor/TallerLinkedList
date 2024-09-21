@@ -12,7 +12,7 @@ public class Biblioteca {
 
     }
 
-    public void registrarLibro() {
+    public void registrarUsuario() {
 
     }
 
