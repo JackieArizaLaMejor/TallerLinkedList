@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tallerlinked;
 
 import java.util.LinkedList;
@@ -13,27 +10,33 @@ import java.util.LinkedList;
 public class ListaEstudiantes {
     LinkedList<Estudiantes> lista = new LinkedList<>();
     
+    public void agregarEstudiante(Estudiantes estudiante){
+       lista.addLast(estudiante);
+       
+    }
+    
+    
+    public void insertarEstudiante(int index, Estudiantes estudiante){
+        lista.addFirst (estudiante);
+    }
+    
     
     
     
     public void eliminarEstudiante(int id){
-        for (Estudiantes estudiantes : lista) {
-            if(estudiantes.getID()==id){
-                lista.remove(id);
-            
-            }
-            
-        }   
-    }
-    
-    public int buscarEstudiante(int id){
-        for (Estudiantes estudiantes : lista) {
-            if(estudiantes.getID()==id){
-                return id;
-            }
+        boolean a = lista.contains(id);
+        if( a == true){
+            lista.remove(id);
+            System.out.println("ID removido: " + id);
             
         }
-        return 0;
+        System.out.println("No se encontro ID");
+  
+    }
+    
+    public void buscarEstudiante(int id){
+        int a = lista.indexOf(id);
+        System.out.println("El id es: " + a);
         
     }
     
@@ -51,6 +54,20 @@ public class ListaEstudiantes {
         
         
     }
+    
+    
+    public void eliminarReprobados(){
+        for (Estudiantes estudiantes : lista) {
+            if(estudiantes.getID()<30){
+                lista.remove(estudiantes);
+                
+            }
+            
+        }
+    }
+    
+    
+    
     
     
 }

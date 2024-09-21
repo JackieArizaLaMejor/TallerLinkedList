@@ -15,7 +15,12 @@ public class Biblioteca {
         libro.add(libros);
     }
 
+<<<<<<< HEAD
     public void registrarLibro() {
+=======
+    public void registrarUsuario() {
+
+>>>>>>> 54bb75728240899a10524c8ecab74031e09f7244
     }
 
     public boolean prestarLibro(String isbn, int ID) {
