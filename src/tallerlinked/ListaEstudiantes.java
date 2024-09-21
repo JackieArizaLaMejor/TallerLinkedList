@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tallerlinked;
 
 import java.util.LinkedList;
@@ -12,6 +9,16 @@ import java.util.LinkedList;
  */
 public class ListaEstudiantes {
     LinkedList<Estudiantes> lista = new LinkedList<>();
+    
+    public void agregarEstudiante(Estudiantes estudiante){
+       lista.addLast(estudiante);
+       
+    }
+    
+    
+    public void insertarEstudiante(int index, Estudiantes estudiante){
+        lista.addFirst (estudiante);
+    }
     
     
     
