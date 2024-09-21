@@ -24,19 +24,23 @@ public class ListaEstudiantes {
     
     
     public void eliminarEstudiante(int id){
-        boolean a = lista.contains(id);
-        if( a == true){
-            lista.remove(id);
-            System.out.println("ID removido: " + id);
-            
-        }
-        System.out.println("No se encontro ID");
-  
+        for (Estudiantes estudiantes : lista) {
+            if(estudiantes.getID()==id){
+                lista.remove(id);
+
+            }
+
+        }   
     }
     
-    public void buscarEstudiante(int id){
-        int a = lista.indexOf(id);
-        System.out.println("El id es: " + a);
+    public int buscarEstudiante(int id){
+        for (Estudiantes estudiantes : lista) {
+            if(estudiantes.getID()==id){
+                return id;
+            }
+            
+        }
+        return 0;
         
     }
     
