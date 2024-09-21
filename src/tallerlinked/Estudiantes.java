@@ -45,6 +45,11 @@ public class Estudiantes {
 
     public Estudiantes() {
     }
+
+    @Override
+    public String toString() {
+        return "Estudiantes{" + "nombre=" + nombre + ", ID=" + ID + ", promedio=" + promedio + '}';
+    }
     
     
 }
