@@ -11,13 +11,13 @@ public class ListaEstudiantes {
     LinkedList<Estudiantes> lista = new LinkedList<>();
     
     public void agregarEstudiante(Estudiantes estudiante){
-       lista.add(estudiante);
+       lista.addLast(estudiante);
        
     }
     
     
-    public void insertarEstudiante(int index, String estudiante){
-        
+    public void insertarEstudiante(int index, Estudiantes estudiante){
+        lista.addFirst (estudiante);
     }
     
     
