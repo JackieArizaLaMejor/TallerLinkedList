@@ -13,13 +13,15 @@ import java.util.LinkedList;
 public class Usuario {
     public String nombre;
     public int ID;
-    LinkedList<Prestamo> prestamosActuales = new LinkedList<>();
-    
+    public LinkedList<Prestamo> prestamosActuales = new LinkedList<>();
 
     public Usuario(String nombre, int ID) {
         this.nombre = nombre;
         this.ID = ID;
+        
+       
     }
+
 
     public String getNombre() {
         return nombre;

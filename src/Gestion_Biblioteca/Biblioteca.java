@@ -1,5 +1,8 @@
 package Gestion_Biblioteca;
 
+import Gestion_Biblioteca.Libro;
+import Gestion_Biblioteca.Prestamo;
+import Gestion_Biblioteca.Usuario;
 import java.util.LinkedList;
 
 public class Biblioteca {
@@ -8,15 +11,17 @@ public class Biblioteca {
     LinkedList<Usuario> usuario = new LinkedList<>();
     LinkedList<Prestamo> prestamo = new LinkedList<>();
 
-    public void agregarLibro() {
-
+    public void agregarLibro(Libro libros) {
+        libro.add(libros);
     }
 
     public void registrarLibro() {
-
     }
 
-    public void prestarLibro() {
+    public boolean prestarLibro(String isbn, int ID) {
+        Libro libro = buscarLibroPorIsbn(isbn);
+
+        return true;
 
     }
 
@@ -36,8 +41,8 @@ public class Biblioteca {
 
     }
 
-    public void buscarLibroPorIsbn() {
-
+    public Libro buscarLibroPorIsbn(String isbn) {
+        return null;
     }
 
     public void buscarUsuarioPorId() {
