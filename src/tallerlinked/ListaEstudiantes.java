@@ -7,15 +7,10 @@ import java.util.LinkedList;
 
 public class ListaEstudiantes {
     LinkedList<Estudiantes> lista = new LinkedList<>();
-    LinkedList<Estudiantes2> otraLista =new LinkedList<>();
+    
     
     public void agregarEstudiante(Estudiantes estudiante){
        lista.addLast(estudiante);
-       
-    }
-    
-    public void agregarEstudiante2(Estudiantes2 estudiante){
-       otraLista.addLast(estudiante);
        
     }
     
@@ -23,10 +18,6 @@ public class ListaEstudiantes {
     public void insertarEstudiante(int index, Estudiantes estudiante){
         lista.add (index, estudiante);
     }
-    
-    public void insertarEstudiante2(int index, Estudiantes2 estudiante){
-        otraLista.add (index, estudiante);
-    }    
     
     public void eliminarEstudiante(int id){
         for (Estudiantes estudiantes : lista) {
@@ -39,15 +30,7 @@ public class ListaEstudiantes {
         }   
     }
     
-    public void eliminarEstudiante2(int id){
-        for (Estudiantes2 estudiantes : otraLista) {
-            if(estudiantes.getID()==id){
-                otraLista.remove(id);
-
-            }
-
-        }   
-    }
+    
     
     public int buscarEstudiante(int id){
         for (Estudiantes estudiantes : lista) {
@@ -59,16 +42,7 @@ public class ListaEstudiantes {
         return 0;
         
     }
-    public int buscarEstudiante2(int id){
-        for (Estudiantes2 estudiantes : otraLista) {
-            if(estudiantes.getID()==id){
-                return id;
-            }
-            
-        }
-        return 0;
-        
-    }
+    
     
     public LinkedList<Estudiantes> obtenerTopEstudiantes(int n) {
     lista.sort(Comparator.comparingDouble(Estudiantes::getPromedio).reversed());
@@ -88,31 +62,10 @@ public class ListaEstudiantes {
         
         
     }
-    public void imprimirLista2(){
-        for (Estudiantes2 estudiantes : otraLista) {
-            System.out.println(estudiantes.toString());
-            
-        }
-        
-        
-    }
-    
     
     public void eliminarReprobados(){
         lista.removeIf(estudiante -> estudiante.getPromedio()< 30);
     }
-    
-    public void eliminarReprobados2(){
-        for (Estudiantes2 estudiantes : otraLista) {
-            if(estudiantes.getID()<30){
-                otraLista.remove(estudiantes);
-                
-            }
-            
-        }
-    }
-    
-    
     
     
 }

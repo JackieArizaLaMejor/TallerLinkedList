@@ -5,9 +5,9 @@ package tallerlinked;
 public class Estudiantes2 {
     String nombre;
     int ID;
-    Double promedio;
+    double promedio;
 
-    public Estudiantes2(String nombre, int ID, Double promedio) {
+    public Estudiantes2(int ID, String nombre, double promedio) {
         this.nombre = nombre;
         this.ID = ID;
         this.promedio = promedio;
