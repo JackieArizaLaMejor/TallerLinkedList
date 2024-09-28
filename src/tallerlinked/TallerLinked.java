@@ -1,7 +1,5 @@
 
 package tallerlinked;
-
-import java.util.LinkedList;
 public class TallerLinked {
 
 
