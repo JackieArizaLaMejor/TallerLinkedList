@@ -7,7 +7,11 @@ public class Estudiantes2 {
     int ID;
     double promedio;
 
+<<<<<<< HEAD
     public Estudiantes2(int ID, String nombre, double promedio) {
+=======
+    public Estudiantes2(String nombre, int ID, double promedio) {
+>>>>>>> 78ebae50f63d262b791e7bed4f8a90a82cb435ef
         this.nombre = nombre;
         this.ID = ID;
         this.promedio = promedio;
