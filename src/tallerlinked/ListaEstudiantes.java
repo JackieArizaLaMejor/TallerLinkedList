@@ -3,10 +3,7 @@ package tallerlinked;
 
 import java.util.LinkedList;
 
-/**
- *
- * @author USUARIO
- */
+
 public class ListaEstudiantes {
     LinkedList<Estudiantes> lista = new LinkedList<>();
     
@@ -26,7 +23,8 @@ public class ListaEstudiantes {
     public void eliminarEstudiante(int id){
         for (Estudiantes estudiantes : lista) {
             if(estudiantes.getID()==id){
-                lista.remove(id);
+                System.out.println("Estudiante eliminado" + estudiantes.toString());
+                lista.remove(estudiantes);
 
             }
 
@@ -61,13 +59,7 @@ public class ListaEstudiantes {
     
     
     public void eliminarReprobados(){
-        for (Estudiantes estudiantes : lista) {
-            if(estudiantes.getID()<30){
-                lista.remove(estudiantes);
-                
-            }
-            
-        }
+        lista.removeIf(estudiante -> estudiante.getPromedio()< 30);
     }
     
     

@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tallerlinked;
 
-/**
- *
- * @author USUARIO
- */
+
 public class Estudiantes {
     String nombre;
     int ID;
@@ -37,7 +31,7 @@ public class Estudiantes {
         this.promedio = promedio;
     }
 
-    public Estudiantes(String nombre, int ID, Double promedio) {
+    public Estudiantes(int ID, String nombre, double promedio) {
         this.nombre = nombre;
         this.ID = ID;
         this.promedio = promedio;
