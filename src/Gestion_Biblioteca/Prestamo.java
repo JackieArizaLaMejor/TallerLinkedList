@@ -1,32 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Gestion_Biblioteca;
 
-/**
- *
- * @author USUARIO
- */
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Prestamo {
     
-    String libroPrestado;
+    Libro libroPrestado;  // Cambia de String a Libro
     int usuarioPrestamo;
     String fechaPrestamo;
     String fechaDevolucion;
 
-    public Prestamo(String libroPrestado, int usuarioPrestamo, String fechaPrestamo, String fechaDevolucion) {
-        this.libroPrestado = libroPrestado;
-        this.usuarioPrestamo = usuarioPrestamo;
-        this.fechaPrestamo = fechaPrestamo;
-        this.fechaDevolucion = fechaDevolucion;
-    }
+public Prestamo(Libro libroPrestado, int usuarioPrestamo, String fechaPrestamo, String fechaDevolucion) {
+    this.libroPrestado = libroPrestado;  // Tipo Libro
+    this.usuarioPrestamo = usuarioPrestamo;
+    this.fechaPrestamo = fechaPrestamo;
+    this.fechaDevolucion = fechaDevolucion;
+}
 
-    public String getLibroPrestado() {
+    public Libro getLibroPrestado() {  // Cambia el getter a Libro
         return libroPrestado;
     }
 
-    public void setLibroPrestado(String libroPrestado) {
+    public void setLibroPrestado(Libro libroPrestado) {
         this.libroPrestado = libroPrestado;
     }
 
@@ -53,16 +48,19 @@ public class Prestamo {
     public void setFechaDevolucion(String fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
+    
+        // Método para verificar si el préstamo está vencido
+    public boolean isVencido() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaDevolucionLocal = LocalDate.parse(fechaDevolucion, formatter);
+        LocalDate fechaActual = LocalDate.now();
+
+        // Si la fecha actual es después de la fecha de devolución
+        return fechaActual.isAfter(fechaDevolucionLocal);
+    }
 
     @Override
     public String toString() {
-        return "Prestamo{" + "libroPrestado=" + libroPrestado + ", usuarioPrestamo=" + usuarioPrestamo + ", fechaPrestamo=" + fechaPrestamo + ", fechaDevolucion=" + fechaDevolucion + '}';
+        return "Prestamo{" + "libroPrestado=" + libroPrestado.getTitulo() + ", usuarioPrestamo=" + usuarioPrestamo + ", fechaPrestamo=" + fechaPrestamo + ", fechaDevolucion=" + fechaDevolucion + '}';
     }
-    
-    
-    
-
-   
-    
-    
 }

@@ -58,14 +58,10 @@ public class Libro {
     }
 
     // Método para devolver el libro
-    public void devolver() {
-        if (estadoPrestamo) {
-            this.estadoPrestamo = false;
-            System.out.println("El libro ha sido devuelto.");
-        } else {
-            System.out.println("El libro no está prestado.");
-        }
-    }
+public void devolver() {
+    this.estadoPrestamo = false;  // Cambiar el estado a disponible
+}
+
 
     @Override
     public String toString() {
