@@ -58,10 +58,9 @@ public class Libro {
     }
 
     // Método para devolver el libro
-public void devolver() {
-    this.estadoPrestamo = false;  // Cambiar el estado a disponible
-}
-
+    public void devolver() {
+        this.estadoPrestamo = false;  // Cambiar el estado a disponible
+    }
 
     @Override
     public String toString() {
