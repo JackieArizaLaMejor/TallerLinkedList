@@ -18,8 +18,7 @@ public class Usuario {
     public Usuario(String nombre, int ID) {
         this.nombre = nombre;
         this.ID = ID;
-        
-       
+        this.prestamosActuales = new LinkedList<>();
     }
 
 
@@ -52,10 +51,10 @@ public class Usuario {
         return "Usuario{" + "nombre=" + nombre + ", ID=" + ID + ", prestamosActuales=" + prestamosActuales + '}';
     }
     
-    public void agregarPrestamo(Prestamo p){
-    prestamosActuales.add(p);
+    public void agregarPrestamo(Prestamo prestamo){
+    prestamosActuales.add(prestamo);
     }
-    public void eliminarPrestamo(Prestamo p){
-    prestamosActuales.remove(p);
+    public void eliminarPrestamo(Prestamo prestamo){
+    prestamosActuales.remove(prestamo);
     }
 }

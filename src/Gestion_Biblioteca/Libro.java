@@ -1,26 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Gestion_Biblioteca;
-/**
- *
- * @author USUARIO
- */
+
 public class Libro {
-    
+
     public String titulo;
     public String autor;
     public String isbn;
     public boolean estadoPrestamo;
 
-    public Libro(String titulo, String autor, String isbn, boolean estadoPrestamo) {
+    public Libro(String titulo, String autor, String isbn) {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
-        this.estadoPrestamo = false;
+        this.estadoPrestamo = false; // Inicialmente, el libro no está prestado
     }
 
+    // Getters y setters
     public String getTitulo() {
         return titulo;
     }
@@ -53,13 +47,28 @@ public class Libro {
         this.estadoPrestamo = estadoPrestamo;
     }
 
+    // Método para prestar el libro
+    public void prestar() {
+        if (!estadoPrestamo) {
+            this.estadoPrestamo = true;
+            System.out.println("El libro ha sido prestado.");
+        } else {
+            System.out.println("El libro ya está prestado.");
+        }
+    }
+
+    // Método para devolver el libro
+    public void devolver() {
+        if (estadoPrestamo) {
+            this.estadoPrestamo = false;
+            System.out.println("El libro ha sido devuelto.");
+        } else {
+            System.out.println("El libro no está prestado.");
+        }
+    }
+
     @Override
     public String toString() {
         return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", isbn=" + isbn + ", estadoPrestamo=" + estadoPrestamo + '}';
     }
-    
-    
-    
-
-    
 }

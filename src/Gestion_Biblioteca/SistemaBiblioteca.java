@@ -20,25 +20,25 @@ public class SistemaBiblioteca {
             biblioteca.agregarLibro(new Libro("El alquimista", "Paulo Coelho", "978-0062315007"));
 
             // Registrar usuarios
-            biblioteca.registrarUsuario(new Usuario("Juan Pérez", "U001"));
-            biblioteca.registrarUsuario(new Usuario("María López", "U002"));
+            biblioteca.registrarUsuario(new Usuario("Juan Pérez", 001));
+            biblioteca.registrarUsuario(new Usuario("María López", 002));
 
             // Prestar libros
-            biblioteca.prestarLibro("978-0307474728", "U001");
-            biblioteca.prestarLibro("978-0307474729", "U002");
+            biblioteca.prestarLibro("978-0307474728", 001);
+            biblioteca.prestarLibro("978-0307474729", 002);
 
             // Mostrar estado actual
             System.out.println("Libros en la biblioteca:");
-            biblioteca.mostrarLibros();
+            biblioteca.mostrarTodosLosLibros();
 
             System.out.println("\nUsuarios registrados:");
-            biblioteca.mostrarUsuarios();
+            biblioteca.mostrarTodosLosUsuarios();
 
             System.out.println("\nPréstamos activos:");
             biblioteca.mostrarPrestamosActivos();
 
             // Devolver un libro
-            biblioteca.devolverLibro("978-0307474728", "U001");
+            biblioteca.devolverLibro("978-0307474728", 001);
 
             System.out.println("\nEstado después de devolución:");
             biblioteca.mostrarPrestamosActivos();
